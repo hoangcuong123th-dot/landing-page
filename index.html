@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CÔNG TY CỔ PHẦN VẬN TẢI VÀ XẾP DỠ HẢI AN</title>
+    <meta
+      name="description"
+      content="Trang giới thiệu CÔNG TY CỔ PHẦN VẬN TẢI VÀ XẾP DỠ HẢI AN (HAI AN TRANSPORT AND STEVEDORING JOINT STOCK COMPANY). Dịch vụ vận tải biển, xếp dỡ cảng, logistics."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue-900: #012a4a;
+        --blue-800: #013a63;
+        --blue-700: #014f86;
+        --blue-600: #005b96;
+        --blue-500: #2c7da0;
+        --blue-400: #38bdf8;
+        --blue-100: #e0f4ff;
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --border-subtle: rgba(148, 163, 184, 0.25);
+        --radius-lg: 20px;
+        --radius-md: 14px;
+        --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.18);
+        --shadow-subtle: 0 12px 30px rgba(15, 23, 42, 0.08);
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text-main);
+        background: radial-gradient(circle at top left, #e0f2fe 0, #f8fafc 40%, #ffffff 100%);
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; text-decoration: none; }
+      .container { width: min(1120px, 100% - 3rem); margin: 0 auto; }
+      .site-header {
+        position: sticky; top: 0; z-index: 10;
+        backdrop-filter: blur(18px);
+        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.06), rgba(15, 23, 42, 0.01)), rgba(248, 250, 252, 0.85);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      }
+      .header-inner {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0.9rem 0.25rem; gap: 1.25rem;
+      }
+      .logo { display: flex; align-items: center; gap: 0.75rem; }
+      .logo-mark {
+        width: 40px; height: 40px; border-radius: 12px;
+        background: radial-gradient(circle at 10% 0%, #e0f4ff 0, #0f4c81 50%, #001f3f 100%);
+        display: flex; align-items: center; justify-content: center;
+        color: white; font-weight: 700; letter-spacing: 0.06em; font-size: 0.9rem;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+      }
+      .logo-text { display: flex; flex-direction: column; gap: 0.1rem; }
+      .logo-name { font-weight: 700; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue-900); }
+      .logo-sub { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted); }
+      .nav { display: flex; align-items: center; gap: 1.4rem; font-size: 0.9rem; }
+      .nav a { position: relative; color: var(--text-muted); font-weight: 500; }
+      .nav a::after {
+        content: ""; position: absolute; left: 0; bottom: -0.28rem;
+        width: 0; height: 2px; border-radius: 999px;
+        background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
+        transition: width 0.2s ease-out;
+      }
+      .nav a:hover { color: var(--blue-800); }
+      .nav a:hover::after { width: 100%; }
+      .btn {
+        border-radius: 999px; padding: 0.6rem 1.4rem; font-size: 0.85rem; font-weight: 600;
+        border: 1px solid transparent; cursor: pointer;
+        transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out, border-color 0.12s ease-out, color 0.12s ease-out;
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+        color: white; box-shadow: 0 14px 35px rgba(30, 64, 175, 0.5);
+      }
+      .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55); }
+      .btn-outline {
+        border-color: rgba(148, 163, 184, 0.55); background: rgba(255, 255, 255, 0.75);
+        color: var(--blue-900);
+      }
+      .btn-outline:hover {
+        border-color: var(--blue-500); background: white;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.16); transform: translateY(-1px);
+      }
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.4); border-color: rgba(148, 163, 184, 0.35);
+        color: var(--blue-800);
+      }
+      .btn-ghost:hover {
+        border-color: var(--blue-500); background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.24); transform: translateY(-1px);
+      }
+      .btn-full { width: 100%; }
+      .hero { padding: 3.4rem 0 3.8rem; }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
+        align-items: center; gap: 2.8rem;
+      }
+      .hero-text { max-width: 560px; }
+      .hero-kicker {
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        padding: 0.18rem 0.7rem; border-radius: 999px;
+        background: rgba(191, 219, 254, 0.7); color: #1d4ed8;
+        font-weight: 600; font-size: 0.7rem; text-transform: uppercase;
+        letter-spacing: 0.14em; margin-bottom: 0.9rem;
+      }
+      .hero h1 {
+        font-size: clamp(2.1rem, 3vw + 1.2rem, 2.9rem); line-height: 1.1;
+        margin: 0 0 0.9rem; color: var(--blue-900);
+      }
+      .hero-subtitle { margin: 0 0 1.4rem; color: var(--text-muted); font-size: 0.98rem; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.6rem; }
+      .hero-meta { display: flex; flex-wrap: wrap; gap: 1.1rem; font-size: 0.83rem; }
+      .hero-meta > div {
+        padding: 0.55rem 0.85rem; border-radius: 999px;
+        background: rgba(241, 245, 249, 0.9); border: 1px solid rgba(148, 163, 184, 0.4);
+        display: inline-flex; flex-direction: column; gap: 0.15rem;
+      }
+      .meta-label { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.64rem; color: var(--text-muted); }
+      .meta-value { font-weight: 600; color: var(--blue-800); }
+      .hero-visual { position: relative; min-height: 320px; }
+      .hero-card {
+        position: relative; border-radius: var(--radius-lg); padding: 1.3rem 1.4rem;
+        background: white; box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+      .hero-card.main-card {
+        position: absolute; inset: 0; transform: translate(-4%, 4%);
+        background: radial-gradient(circle at top left, #e0f2fe 0, #ffffff 45%, #f8fafc 100%);
+        display: flex; flex-direction: column; gap: 0.6rem;
+      }
+      .card-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-muted); }
+      .hero-card h2 { margin: 0; font-size: 1.7rem; color: var(--blue-900); }
+      .card-subtitle { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+      .badge-list { list-style: none; padding: 0; margin: 0.6rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+      .badge-list li {
+        font-size: 0.78rem; padding: 0.35rem 0.7rem; border-radius: 999px;
+        background: rgba(219, 234, 254, 0.9); border: 1px solid rgba(129, 140, 248, 0.6);
+        color: #1e3a8a;
+      }
+      .hero-card.image-card {
+        position: absolute; right: 0; bottom: 0;
+        width: min(300px, 100%); transform: translate(10%, 8%);
+        padding: 0; overflow: hidden; background: transparent; border: none; box-shadow: none;
+      }
+      .hero-card.image-card .card-wrap {
+        border-radius: var(--radius-lg); overflow: hidden;
+        box-shadow: var(--shadow-soft); border: 3px solid rgba(255,255,255,0.9);
+      }
+      .hero-photo {
+        width: 100%; height: 200px; object-fit: cover; display: block;
+      }
+      .hero-card.image-card .image-caption {
+        margin: 0.5rem 0 0; padding: 0.5rem 0.6rem;
+        font-size: 0.8rem; font-weight: 600; color: var(--blue-900);
+        background: rgba(255,255,255,0.95); border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      }
+      .section { padding: 3.4rem 0; }
+      .section-alt {
+        background: linear-gradient(135deg, rgba(219, 234, 254, 0.7), rgba(191, 219, 254, 0.02)), #f8fafc;
+      }
+      .section-header { max-width: 640px; margin-bottom: 2.1rem; }
+      .section-header h2 { margin: 0 0 0.5rem; font-size: 1.6rem; color: var(--blue-900); }
+      .section-header p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+      .section-inner.two-cols {
+        display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+        gap: 2.4rem; align-items: flex-start;
+      }
+      .section h2 { margin-top: 0; font-size: 1.6rem; color: var(--blue-900); }
+      .section p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.6; }
+      .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+      .info-item {
+        padding: 0.8rem 1rem; border-radius: var(--radius-md);
+        border: 1px solid var(--border-subtle);
+        background: rgba(255, 255, 255, 0.85); box-shadow: var(--shadow-subtle);
+      }
+      .info-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-muted); margin-bottom: 0.2rem; }
+      .info-value { font-size: 0.9rem; font-weight: 500; color: var(--blue-900); }
+      .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+      .service-card {
+        padding: 1.5rem 1.4rem; border-radius: var(--radius-lg);
+        background: white; box-shadow: var(--shadow-subtle);
+        border: 1px solid rgba(148, 163, 184, 0.45);
+      }
+      .service-card h3 { margin: 0 0 0.5rem; font-size: 1.1rem; color: var(--blue-800); }
+      .service-card p { margin: 0 0 0.8rem; font-size: 0.9rem; }
+      .service-card ul { padding-left: 1.1rem; margin: 0; font-size: 0.88rem; color: var(--text-main); }
+      .pill-list { display: flex; flex-direction: column; gap: 0.8rem; }
+      .pill-item {
+        border-radius: 999px; padding: 0.75rem 1.15rem;
+        background: rgba(239, 246, 255, 0.9); border: 1px solid rgba(129, 140, 248, 0.45);
+        display: flex; flex-direction: column; gap: 0.15rem;
+      }
+      .pill-title { font-size: 0.86rem; font-weight: 600; color: var(--blue-900); }
+      .pill-desc { font-size: 0.82rem; color: var(--text-muted); }
+      .contact-section { align-items: stretch; }
+      .contact-details { margin-top: 1.3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+      .contact-details > div {
+        padding: 0.7rem 0.9rem; border-radius: var(--radius-md);
+        border: 1px dashed rgba(148, 163, 184, 0.75);
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .contact-form {
+        padding: 1.6rem 1.5rem 1.4rem; border-radius: var(--radius-lg);
+        background: white; box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+      .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; }
+      .form-field { margin-bottom: 0.9rem; }
+      .form-field label { display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.3rem; color: var(--blue-900); }
+      .form-field input, .form-field select, .form-field textarea {
+        width: 100%; border-radius: 12px; border: 1px solid rgba(148, 163, 184, 0.7);
+        padding: 0.6rem 0.75rem; font-family: inherit; font-size: 0.85rem;
+        color: var(--text-main); background: rgba(248, 250, 252, 0.9);
+        outline: none;
+        transition: border-color 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out;
+      }
+      .form-field textarea { resize: vertical; }
+      .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+        border-color: var(--blue-600); box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+        background: white;
+      }
+      .form-note { margin: 0.55rem 0 0; font-size: 0.75rem; color: var(--text-muted); }
+      .site-footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.4);
+        background: radial-gradient(circle at top, #e0f2fe 0, #0b1120 65%);
+        color: rgba(226, 232, 240, 0.9);
+      }
+      .footer-inner {
+        padding: 1.4rem 0; text-align: center; font-size: 0.8rem;
+        display: flex; flex-direction: column; gap: 0.2rem;
+      }
+      @media (max-width: 900px) {
+        .header-inner { flex-wrap: wrap; }
+        .nav { display: none; }
+        .hero { padding-top: 2.2rem; }
+        .hero-inner { grid-template-columns: minmax(0, 1fr); }
+        .hero-visual { margin-top: 1.6rem; min-height: 260px; }
+        .hero-card.main-card { position: relative; transform: none; }
+        .hero-card.image-card { position: relative; transform: none; margin-top: 1.1rem; width: 100%; }
+        .section-inner.two-cols { grid-template-columns: minmax(0, 1fr); }
+        .card-grid { grid-template-columns: minmax(0, 1fr); }
+        .contact-form { margin-top: 0.4rem; }
+      }
+      @media (max-width: 640px) {
+        .container { width: min(100% - 2rem, 640px); }
+        .hero-actions { flex-direction: column; }
+        .form-row { grid-template-columns: minmax(0, 1fr); }
+        .hero-meta { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <div class="logo-mark">HA</div>
+          <div class="logo-text">
+            <span class="logo-name">HAI AN</span>
+            <span class="logo-sub">TRANSPORT &amp; STEVEDORING</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#about">Giới thiệu</a>
+          <a href="#services">Dịch vụ</a>
+          <a href="#strengths">Lợi thế</a>
+          <a href="#contact">Liên hệ</a>
+        </nav>
+        <a href="#contact" class="btn btn-outline">Liên hệ ngay</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="hero-kicker">
+              CÔNG TY CỔ PHẦN VẬN TẢI VÀ XẾP DỠ HẢI AN
+            </p>
+            <h1>Giải pháp vận tải biển &amp; xếp dỡ chuyên nghiệp</h1>
+            <p class="hero-subtitle">
+              HAI AN TRANSPORT AND STEVEDORING JOINT STOCK COMPANY (HAIANTS., JSC)
+              cung cấp dịch vụ vận tải biển, xếp dỡ cảng, logistics và các dịch vụ
+              hỗ trợ hàng hải với tiêu chuẩn an toàn và hiệu quả cao.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Nhận tư vấn</a>
+              <a href="#services" class="btn btn-ghost">Xem dịch vụ</a>
+            </div>
+            <div class="hero-meta">
+              <div>
+                <span class="meta-label">Mã số doanh nghiệp</span>
+                <span class="meta-value">0103818809</span>
+              </div>
+              <div>
+                <span class="meta-label">Ngày hoạt động</span>
+                <span class="meta-value">16/05/2009</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card main-card">
+              <p class="card-label">Doanh nghiệp</p>
+              <h2>HAI AN</h2>
+              <p class="card-subtitle">
+                Vận tải biển &amp; xếp dỡ container, hàng hóa, dịch vụ logistics trọn gói.
+              </p>
+              <ul class="badge-list">
+                <li>Vận tải đường thủy</li>
+                <li>Xếp dỡ cảng biển</li>
+                <li>Dịch vụ hàng hải</li>
+              </ul>
+            </div>
+            <div class="hero-card image-card">
+              <div class="card-wrap">
+                <img
+                  class="hero-photo"
+                  src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&q=85"
+                  srcset="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&q=85 400w, https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&q=85 600w"
+                  sizes="(max-width: 900px) 100vw, 300px"
+                  alt="Tàu container và cảng biển - HAI AN"
+                  loading="lazy"
+                />
+                <p class="image-caption">Đội tàu &amp; cảng biển HAI AN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container section-inner two-cols">
+          <div>
+            <h2>Về CÔNG TY CỔ PHẦN VẬN TẢI VÀ XẾP DỠ HẢI AN</h2>
+            <p>
+              CÔNG TY CỔ PHẦN VẬN TẢI VÀ XẾP DỠ HẢI AN là doanh nghiệp hoạt động
+              trong lĩnh vực vận tải biển, xếp dỡ và dịch vụ hàng hải với trụ sở
+              tại Hà Nội, Việt Nam. Với đội ngũ nhân sự giàu kinh nghiệm và hệ
+              thống cơ sở vật chất hiện đại, công ty cung cấp chuỗi dịch vụ vận
+              tải và logistics an toàn, đúng tiến độ.
+            </p>
+            <p>
+              Chúng tôi chú trọng ứng dụng công nghệ và tiêu chuẩn quản lý hiện
+              đại vào mọi hoạt động, từ vận hành tàu, xếp dỡ hàng hóa đến theo
+              dõi hành trình và chăm sóc khách hàng.
+            </p>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Tên viết tắt</span>
+              <span class="info-value">HAIANTS., JSC</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Loại hình doanh nghiệp</span>
+              <span class="info-value">Công ty cổ phần có vốn nước ngoài</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Địa chỉ trụ sở</span>
+              <span class="info-value">
+                Tầng 7, số 45, phố Triệu Việt Vương, Quận Hai Bà Trưng, Hà Nội, Việt Nam
+              </span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Điện thoại</span>
+              <span class="info-value">+84923610645</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Website</span>
+              <span class="info-value">www.haiants.vn</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <h2>Dịch vụ chính</h2>
+            <p>
+              Cung cấp trọn gói dịch vụ hỗ trợ vận tải biển, xếp dỡ hàng hóa và
+              giải pháp logistics cho khách hàng trong và ngoài nước.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="service-card">
+              <h3>Vận tải biển &amp; tuyến hàng hải</h3>
+              <p>
+                Tổ chức vận tải hành khách, hàng hóa bằng đường thủy nội địa và
+                quốc tế; khai thác tuyến vận tải container và hàng tổng hợp.
+              </p>
+              <ul>
+                <li>Vận hành đội tàu container &amp; tàu hàng rời</li>
+                <li>Lịch trình ổn định, đúng giờ</li>
+                <li>Theo dõi hành trình chủ động</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <h3>Xếp dỡ &amp; khai thác cảng</h3>
+              <p>
+                Dịch vụ bốc xếp, lưu kho, trung chuyển hàng hóa tại cảng biển,
+                cảng cạn và hệ thống kho bãi hiện đại.
+              </p>
+              <ul>
+                <li>Xếp dỡ container, hàng rời, hàng dự án</li>
+                <li>Thiết bị nâng hạ chuyên dụng</li>
+                <li>Quy trình an toàn, nhanh chóng</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <h3>Dịch vụ hàng hải &amp; logistics</h3>
+              <p>
+                Cung cấp các dịch vụ hỗ trợ hàng hải, đại lý tàu biển, khai báo
+                hải quan và giải pháp logistics tích hợp.
+              </p>
+              <ul>
+                <li>Đại lý tàu biển &amp; môi giới</li>
+                <li>Tư vấn tuyến, luồng hàng hải</li>
+                <li>Dịch vụ chứng từ &amp; thủ tục</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- STRENGTHS -->
+      <section id="strengths" class="section">
+        <div class="container section-inner two-cols">
+          <div>
+            <h2>Lợi thế cạnh tranh của HAI AN</h2>
+            <p>
+              Chúng tôi luôn đặt yếu tố an toàn, chất lượng dịch vụ và tối ưu
+              chi phí cho khách hàng lên hàng đầu, đồng thời không ngừng đầu tư
+              vào đội tàu, trang thiết bị và con người.
+            </p>
+          </div>
+          <div class="pill-list">
+            <div class="pill-item">
+              <span class="pill-title">Kinh nghiệm lâu năm</span>
+              <span class="pill-desc">
+                Hoạt động từ năm 2009 với mạng lưới đối tác và khách hàng rộng khắp.
+              </span>
+            </div>
+            <div class="pill-item">
+              <span class="pill-title">Đội ngũ chuyên nghiệp</span>
+              <span class="pill-desc">
+                Thuyền viên, kỹ sư và nhân sự logistics được đào tạo bài bản, am hiểu
+                thực tế vận hành.
+              </span>
+            </div>
+            <div class="pill-item">
+              <span class="pill-title">Cơ sở vật chất hiện đại</span>
+              <span class="pill-desc">
+                Đội tàu, hệ thống kho bãi và thiết bị xếp dỡ đáp ứng tiêu chuẩn cao
+                của ngành hàng hải.
+              </span>
+            </div>
+            <div class="pill-item">
+              <span class="pill-title">Giải pháp linh hoạt</span>
+              <span class="pill-desc">
+                Thiết kế dịch vụ phù hợp từng loại hàng, tuyến vận tải và yêu cầu
+                đặc thù của khách hàng.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section-alt">
+        <div class="container section-inner two-cols contact-section">
+          <div>
+            <h2>Liên hệ với HAI AN</h2>
+            <p>
+              Vui lòng để lại thông tin, đội ngũ tư vấn của chúng tôi sẽ liên hệ
+              lại trong thời gian sớm nhất để hỗ trợ nhu cầu vận tải và dịch vụ
+              hàng hải của bạn.
+            </p>
+            <div class="contact-details">
+              <div>
+                <span class="info-label">Điện thoại</span>
+                <span class="info-value">+84923610645</span>
+              </div>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">hoangcuong123th@gmail.com</span>
+              </div>
+              <div>
+                <span class="info-label">Địa chỉ</span>
+                <span class="info-value">
+                  Tầng 7, số 45, phố Triệu Việt Vương, Quận Hai Bà Trưng, Hà Nội, Việt Nam
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Họ và tên</label>
+                <input id="name" type="text" placeholder="Nhập họ và tên" />
+              </div>
+              <div class="form-field">
+                <label for="company">Công ty</label>
+                <input id="company" type="text" placeholder="Tên doanh nghiệp (nếu có)" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="form-field">
+                <label for="phone">Số điện thoại</label>
+                <input id="phone" type="tel" placeholder="Nhập số điện thoại" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="service">Nhu cầu dịch vụ</label>
+              <select id="service">
+                <option>Vận tải biển</option>
+                <option>Xếp dỡ &amp; khai thác cảng</option>
+                <option>Logistics &amp; dịch vụ hàng hải</option>
+                <option>Khác</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Nội dung</label>
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Mô tả chi tiết lô hàng, tuyến vận chuyển hoặc nhu cầu cụ thể..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Gửi yêu cầu
+            </button>
+            <p class="form-note">
+              * Đây là biểu mẫu minh họa. Bạn có thể tích hợp với hệ thống email hoặc CRM của
+              công ty để nhận thông tin khách hàng.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> CÔNG TY CỔ PHẦN VẬN TẢI VÀ XẾP DỠ HẢI AN.
+          All rights reserved.
+        </p>
+        <p>HAI AN TRANSPORT AND STEVEDORING JOINT STOCK COMPANY (HAIANTS., JSC)</p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
